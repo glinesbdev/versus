@@ -1,0 +1,29 @@
+{
+    "root": "./src",
+    "author": "Bradyn Glines <@glinesbdev>",
+    "title": "Versus",
+    "description": "A community driven reference for the Verse programming language (Epic Games)",
+    "language": "en",
+    "direction": "ltr",
+    "gitbook.version": ">=3.2.0",
+    "plugins": [
+        "heading-anchors@1.0.3",
+        "richquotes@0.0.9",
+        "github@2.0.0",
+        "collapsible-menu",
+        "-sharing",
+        "block-code"
+    ],
+    "pluginsConfig": {
+        "richquotes": {
+            "default": false
+        },
+        "github": {
+            "url": "https://github.com/glinesbdev/versus"
+        },
+        "block-code": {
+			"cloneButton": true,
+			"lineNumber": true
+        }
+    }
+}
