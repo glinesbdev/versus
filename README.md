@@ -1,5 +1,7 @@
 # Versus
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c4627f0-0421-45c1-8c42-45b328224db9/deploy-status)](https://app.netlify.com/sites/magnificent-cendol-bd7127/deploys)
+
 This is an open sourced, community driven, living document, which means that it will be updated as time goes on to include more examples, correct erratum, etc. provided by both the maintainer as well as members of the community, like you!
 
 Created with [GitBook](https://www.gitbook.com/)
