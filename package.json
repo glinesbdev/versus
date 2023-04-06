@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "An open sourced, community driven, living document for Epic Games' Verse programming language",
   "main": "index.js",
-  "dependencies": {
-    "gitbook-cli": "^2.3.2",
-    "gitbook-plugin-block-code": "^0.0.1",
-    "gitbook-plugin-collapsible-menu": "^1.0.3",
-    "gitbook-plugin-github": "^2.0.0",
-    "gitbook-plugin-heading-anchors": "^1.0.3",
-    "gitbook-plugin-richquotes": "^0.0.9"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/glinesbdev/versus/issues"
   },
-  "homepage": "https://github.com/glinesbdev/versus#readme"
+  "homepage": "https://github.com/glinesbdev/versus#readme",
+  "dependencies": {
+    "gitbook-plugin-collapsible-menu": "^1.0.3",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-heading-anchors": "^1.0.3",
+    "gitbook-plugin-richquotes": "^0.0.9"
+  },
+  "devDependencies": {
+    "honkit": "^4.0.7"
+  }
 }

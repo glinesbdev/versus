@@ -4,7 +4,7 @@
 
 This is an open sourced, community driven, living document, which means that it will be updated as time goes on to include more examples, correct erratum, etc. provided by both the maintainer as well as members of the community, like you!
 
-Created with [GitBook](https://www.gitbook.com/)
+Created with [Honkit](https://github.com/honkit/honkit)
 
 ## Issues
 
