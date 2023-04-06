@@ -34,7 +34,7 @@ We will come back to the VS Code editor after setting up the other devices we wi
 
 ![Open VS Code Verse](images/open_vs_code_verse.png)
 
-To be able to interact with your new device, you will need to compile the Verse script in your project. You can do that either by using the keyboard shortcut `CTRL+SHIFT+B` or /home/bradyn/projects/versus/src/examples/custom_npc_dialog/imagesby clicking the `Build Verse Code` button in the `Verse` window menu.
+To be able to interact with your new device, you will need to compile the Verse script in your project. You can do that either by using the keyboard shortcut `CTRL+SHIFT+B` or by clicking the `Build Verse Code` button in the `Verse` window menu.
 
 ![Build Verse Code](images/build_verse_code.png)
 
