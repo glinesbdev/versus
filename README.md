@@ -6,6 +6,19 @@ This is an open sourced, community driven, living document, which means that it 
 
 Created with [Honkit](https://github.com/honkit/honkit)
 
+## Getting Started
+
+To create and preview content locally, do the following:
+
+```bash
+$ git clone git@github.com:glinesbdev/versus.git
+$ cd versus
+$ npm install
+$ npx honkit serve
+```
+
+Then head to <http://localhost:4000> to view the book. Any changes you make to content will be automatically reloaded by your browser.
+
 ## Issues
 
 Find something that needs fixing? If you have the knowledge and know-how to fix it, please contribute back! For anything else, please [create an issue](https://github.com/glinesbdev/versus/issues).
