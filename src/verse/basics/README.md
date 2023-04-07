@@ -64,9 +64,9 @@ if (IsOnFire?):
 
 The structure of an `if` statement is broken down as `if (condition-to-check):`. It's required that we use a colon (`:`) after the closing parenthesis (`)`). The next line needs to start with 4 lines of empty space, equal to pushing the TAB key on your keyboard once.
 
-We also notice that when we set `IsOnFire` to `true`, we did not use a question mark (`?`). With the `logic` data type, we "ask" the variable if it is `true` or `false`. When used in an `if` statement, we "ask" the variable by adding a question mark (`?`) to the end of the variable name with no spaces.
-
 > Verse is a `whitespace dependent` language, meaning if you don't have enough whitespace, or whitespace in the wrong location in your code, it will give you errors.
+
+We also notice that when we set `IsOnFire` to `true`, we did not use a question mark (`?`). With the `logic` data type, we "ask" the variable if it is `true` or `false`. When used in an `if` statement, we "ask" the variable by adding a question mark (`?`) to the end of the variable name with no spaces.
 
 The line that says `ScreamInPanic()` is a method. We'll get into methods a bit later.
 
@@ -105,7 +105,80 @@ else:
 
 > If we are on fire, we scream in panic! If we are **not** on fire **and** we are hungry, we eat some lunch. Otherwise, we play some Fortnite! 😀
 
-Wow, that's super cool! As mentioned before, `if` statements can branch many, many times. This is a super useful programming construct in all programming languages.
+ ### Logical Modifiers
+
+ Logical modifiers allow us to combine conditions into a single `if` statement. These are able to be mixed and matched to produce some interesting effects.
+
+```ruby
+IsOnFire : logic = false
+IsHungry : logic = true
+
+if (IsOnFire? and IsHungry?):
+    ScreamInPanic()
+    EatSomeLunch()
+else:
+    PlayFortnite()
+```
+
+> If we are on fire **and** we are hungry, first scream in panic then eat some lunch.
+
+`and` is another keyword which means that both conditions have to be true. If they aren't both true at the same time, then we don't perfom the code in that branch. We also have another keyword: `or`.
+
+```ruby
+IsOnFire : logic = false
+IsHungry : logic = true
+
+if (IsOnFire? or IsHungry?):
+    ScreamInPanic()
+    EatSomeLunch()
+else:
+    PlayFortnite()
+```
+
+> If we are on fire **or** we are hungry, first scream in panic then eat some lunch.
+
+`or` is used to to check if either condition is true. If at least one of them is true, then perform the code in that branch. Otherwise, move on.
+
+The final keyword we can use to modify an `if` statement is `not`. `not` means, "check if the conditon is the opposite of it's value" (😵), meaning `not true` is `false` and `not false` is `true`.
+
+```ruby
+IsOnFire : logic = false
+IsHungry : logic = true
+
+if (IsHungry? and not IsOnFire?):
+    ScreamInPanic()
+    EatSomeLunch()
+else:
+    PlayFortnite()
+```
+
+> If we are hungry **and** we are **not** on fire, first scream in panic then eat some lunch.
+
+### Logic Context
+
+Vere supplies us with an idea called a `context`. A `context` is a specific place in our code where special, extraordinary things can happen. It sounds strange at first, and to be honest, it kind of is, but `context`s are super powerful. The `if` statement provides us with a fallible `context`. This means the conditions we check for in an `if` statement can fail!
+
+```ruby
+IsOnFire : logic = false
+
+if (IsOnFire?):
+    ...do something if on fire...
+```
+
+Since `IsOnFire` is given the value of `false`, we can see that this `if` statement has "failed" to satisfy the condition, thus we will not do anything since we are not on fire.
+
+### If Variables
+
+We can also assign a variable inside the condition of an `if` statement. This is useful when you have a method that can either succeed or fail, and if it succeeds, then you can retrieve that variable.
+
+```ruby
+if (Coins := GetPlayerCoins[]):
+    ...do something with Coins variable...
+```
+
+Wait a minute! We saw how to create a variable and that's not how we did it before! This is a special case where you do not have to define the data type of the variable explicitly. UEFN knows what type of data the `GetPlayerCoins` method gives us, which is super handy! We can also notice that we call the method with square brackets (`[]`) instead of parenthesis (`()`) here. If a method has a chance to fail, we have to use square brackets!
+
+> I know I promised we would talk about methods soon... and we will! Stay tuned!
 
 ## Arrays
 
@@ -115,7 +188,7 @@ When we create a variable like `MyGrade : string = "A+"`, we can only assign a s
 Numbers : []int = array{} # This creates an empty array
 ```
 
-The syntax of an array is a bit different from a regular variable. When we define the data type of the variable, we put open and closing square brackets `[]` before the data type's name. This tells UEFN that we want to use an array. The varaible's value, the information after the equal sign (`=`), is a new array `object`. Objects are also super important in programming and will be covered later.
+The syntax of an array is a bit different from a regular variable. When we define the data type of the array, we put open and closing square brackets `[]` before the data type, `int`. This tells UEFN that we want to use an array data type. The varaible's value, the information after the equal sign (`=`), is a new array `object`. Objects are also super important in programming and will be covered later.
 
 > An object is defined by it's name followed by open and closing curly braces i.e. array{}
 
@@ -129,7 +202,7 @@ Notice how each new number in this array is followed by a comma (`,`). This sepa
 
 ### Iteration
 
-Iteration may be a scary sounding word for you; I know it was when I was a new programmer. It is a term in programming that means "go over each item, one at a time". We can use iterators to process or manipulate each piece of data, one item at a time. To do this, we will introduce the `for` keyword:
+Iteration may be a scary sounding word; I know it was for me when I was a new programmer. It is a term in programming that means "go over each item, one at a time". We can use iterators to process or manipulate each piece of data, one item at a time. To do this, we will introduce the `for` keyword:
 
 ```ruby
 Numbers : []int = array{ 5, 4, 3, 2, 1 }
@@ -150,26 +223,28 @@ What the above code will does is define a new variable called `Number` which wil
 
 Do you know what the output to this `for` loop would be? An important part of programming is to be able to visualize, as best you can, the outcome of the code before it's even run!
 
-Did you have a think about it? I sure hope so; it's good for ya 😉. The output of the `for` loop is:
+> Did you have a think about it? I sure hope so; it's good for ya 😉.
 
-```
-I have 5 lives left!
-I have 4 lives left!
-I have 3 lives left!
-I have 2 lives left!
-I have 1 lives left!
-I'm dead!
-```
+<details>
+    <summary style="display: list-item;">Answer</summary>
+
+    <span>I have 5 lives left!</span><br/>
+    <span>I have 4 lives left!</span><br/>
+    <span>I have 3 lives left!</span><br/>
+    <span>I have 2 lives left!</span><br/>
+    <span>I have 1 lives left!</span><br/>
+    <span>I'm dead!</span><br/>
+</details>
 
 ## Maps
 
-A `map` is another Verse collection that holds key-value pairs of data, that is to say that we can assign a piece of data to a specific name (similar to a variable but not the same). Like arrays, they can hold multiple values:
+A `map` is another Verse collection that holds key-value pairs of data, that is to say that we can assign a piece of data to a specific name (similar to a variable but not the same). Like arrays, they can hold multiple values.
 
 ```ruby
 Resources : [string]int = map{}
 ```
 
-The syntax for the `map` data type is `[key_type]value_type`. We have created a `map` with `string` keys and `int` values. Like arrays, we can initialize the map when we create it:
+The syntax for the `map` data type is `[key_type]value_type`. We have created a `map` with `string` keys and `int` values. Like arrays, we can initialize the map when we create it.
 
 ```ruby
 Resources : [string]int = map{ "Wood" => 5, "Stone" => 1, "Steel" => 99, "Coins" => 0 }
