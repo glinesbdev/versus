@@ -11,7 +11,8 @@
         "richquotes@0.0.9",
         "github@2.0.0",
         "collapsible-menu",
-        "-sharing"
+        "-sharing",
+        "code"
     ],
     "pluginsConfig": {
         "richquotes": {
@@ -19,6 +20,15 @@
         },
         "github": {
             "url": "https://github.com/glinesbdev/versus"
+        },
+        "code": {
+            "copyButtons": true
+        }
+    },
+    "variables": {
+        "partials": {
+            "path": "/partials",
+            "images_path": "/partials/images"
         }
     }
 }

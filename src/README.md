@@ -1,8 +1,8 @@
-# Verse
+# About
 
 > Verse is a new programming language from Epic Games for Unreal Engine for Fortnite (UEFN). This document aims to aid in the learning of the Verse programming language.
 
-## Why this guide?
+## Why this book?
 
 There are a lot of people that are new to programming joining in on the fun that is [UEFN][UEFN_SITE]. With UEFN comes a lot of new and powerful tools to create experiences to share with other players inside of Fortnite. One of those new powerful tools is Verse, Epic Games' own programming language used with UEFN to power your personalized [​Devices][GLOSSARY_DEVICE] specifically suited to fit your creative needs.
 
