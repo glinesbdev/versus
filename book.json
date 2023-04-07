@@ -29,6 +29,24 @@
         "partials": {
             "path": "/partials",
             "images_path": "/partials/images"
+        },
+        "examples": {
+            "path": "/examples"
+        },
+        "external": {
+            "links": {
+                "fornite_creative_discord": "https://discord.gg/fortnitecreative",
+                "uefn": "https://www.fortnite.com/news/unreal-editor-for-fortnite-and-creator-economy-2-0-are-here-new-worlds-await",
+                "uefn_docs": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-documentation",
+                "uefn_verse": {
+                    "common_types": "https://dev.epicgames.com/documentation/en-us/uefn/common-types-in-verse",
+                    "learn": "https://dev.epicgames.com/documentation/en-us/uefn/learn-programming-with-verse-in-unreal-editor-for-fortnite",
+                    "language_reference": "https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference"
+                },
+                "uefn_glossary": {
+                    "device": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-glossary#device"
+                }
+            }
         }
     }
 }

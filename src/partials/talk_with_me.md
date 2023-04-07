@@ -1,0 +1,1 @@
+please feel free to message me at `@glinesbdev` in the [Fortnite Creative Official]({{ book.external.links.fornite_creative_discord }}) Discord server (`#uefn-verse` channel) and I'll be happy to talk with you about it

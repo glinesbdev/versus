@@ -1,6 +1,13 @@
 # Summary
 
-* [Introduction](README.md)
+* [About](README.md)
+* [Learn Verse](verse/README.md)
+    * [Basics](verse/basics/README.md)
+        * [Comments](verse/basics/README.md#comments)
+        * [Variables](verse/basics/README.md#variables)
+        * [Logic](verse/basics/README.md#logic)
+        * [Arrays](verse/basics/README.md#arrays)
+        * [Maps](verse/basics/README.md#maps)
 * [Examples](examples/README.md)
     * [Custom NPC Dialog](examples/custom_npc_dialog/README.md)
         * [Prerequisites](examples/custom_npc_dialog/README.md#prerequisites)
