@@ -2,6 +2,10 @@
 
 A style for how variables are written. Ex: MyVariable
 
+## encapsulate
+
+Bundle up different instructions into a single instruction.
+
 ## immutable
 
 A variable that is not able to be changed.
@@ -30,9 +34,21 @@ A concept implementation mechanism used by a programming language.
 
 A variable that is able to be changed.
 
+## readability
+
+The ease with which the software is read and understood.
+
+## scope
+
+Scope is the area of the program where an item (variable, method, etc.) is recognized as valid.
+
 ## scoping
 
 Scope is the area of the program where an item (variable, method, etc.) is recognized as valid.
+
+## snake case
+
+A style for how variables are written. Ex: my_variable
 
 ## syntax
 
@@ -41,3 +57,7 @@ A concept implementation mechanism used by a programming language.
 ## variable
 
 A data container to store information about the program.
+
+## visibility
+
+An attribute used to determine how accessible some code is to the rest of your program.

@@ -41,7 +41,8 @@
                 "uefn_verse": {
                     "common_types": "https://dev.epicgames.com/documentation/en-us/uefn/common-types-in-verse",
                     "learn": "https://dev.epicgames.com/documentation/en-us/uefn/learn-programming-with-verse-in-unreal-editor-for-fortnite",
-                    "language_reference": "https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference"
+                    "language_reference": "https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference",
+                    "api_reference": "https://dev.epicgames.com/documentation/en-us/uefn/verse-api"
                 },
                 "uefn_glossary": {
                     "device": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-glossary#device"
