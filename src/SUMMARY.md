@@ -16,6 +16,8 @@
         * [Objects](verse/basics/README.md#objects)
         * [Modules](verse/basics/README.md#modules)
         * [Conclusion](verse/basics/README.md#conclusion)
+* [UEFN Essentials](uefn_essentials/README.md)
+   * [Testing Multiplayer Projects](uefn_essentials/testing_multiplayer_projects/README.md)
 * [Examples](examples/README.md)
     * [Custom NPC Dialog](examples/custom_npc_dialog/README.md)
         * [Prerequisites](examples/custom_npc_dialog/README.md#prerequisites)
