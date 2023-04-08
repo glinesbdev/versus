@@ -338,7 +338,7 @@ The syntax breakdown here is `if (condition) then DoSomethingWhenTrue() else DoS
 
 ### Single Line Dot Expressions
 
-Identical to `Single Line Expressions` in purpose but written in a different way. This also imporoves readability and it's less typing (win! 😀).
+Single Line Dot expressions make it easy to call fallible methods in sequence, on a single line. The only catch is you can't use an `else` block with this format.
 
 ```ruby
 IsOnFire : logic = true
@@ -349,11 +349,10 @@ if (IsOnFire?) . ScreamInPanic() ; EatSomeLunch()
 
 if (IsOnFire?):
     ScreamInPanic()
-else:
     EatSomeLunch()
 ```
 
-The syntax breakdown here is `if (condition) . DoSomethingWhenTrue() ; DoSomethingWhenFalse()`.
+The syntax is `if (condition) . DoThisIfTrue() ; AndThisIfTrue() ; AnotherThingIfTrue() ...`. It is possible to chain as many statements together that you'd like to perform using a semicolon (`;`) as long as the condition is true.
 
 ## Arrays
 
