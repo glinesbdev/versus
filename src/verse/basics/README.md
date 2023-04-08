@@ -668,7 +668,7 @@ player_data := class:
 
     # We define methods directly in the class' definition!
     IsPlayerDead() : logic =
-        if (IsDead?) . true ; false
+        if (IsDead?) then true else false
 ```
 
 Like a struct, the syntax to make a new class is `name_of_class := class:`. Two other major differences with classes vs structs:
