@@ -4,7 +4,7 @@ The information contained here is best learned by typing it in (not copying!) wh
 
 > Use this information in additon to the [Official Verse documentation]({{ book.external.links.uefn_verse.learn }}) along with the [Verse Language Reference]({{ book.external.links.uefn_verse.language_reference }}).
 
-> {% include [book.partials.path, '/download_vs_code.md'] | join %}
+> {% include [book.partials.path, '/download-vs-code.md'] | join %}
 
 # Verse Basics
 
@@ -27,7 +27,7 @@ SomeCodeHere() # They can even be put on the same line after code!
 # SomeCodeHere()
 ```
 
-I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now? Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting pratice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom_npc_dialog/README.md)
+I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now? Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting pratice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom-npc-dialog/README.md)
 
 ## Numbers
 
@@ -776,7 +776,7 @@ If you inherit from another class, you may think to yourself, "But what can the 
 
 It is **very** much worth your time to read through these files. Not only will you learn more about what's available to use, but you will see many more of the advanced language syntax available to all Verse programs.
 
-A great example of a custom `creative_device` class is our [Custom NPC Dialog Example]({{ book.examples.path }}/custom_npc_dialog/README.md).
+A great example of a custom `creative_device` class is our [Custom NPC Dialog Example]({{ book.examples.path }}/custom-npc-dialog/README.md).
 
 ## Modules
 
@@ -797,7 +797,7 @@ Take a look at the `.digest.verse` files that I mentioned earlier and you can se
 
 Submodules are folders (or directories) that you add to your Verse files. The name of that folder is actually a module! All of the files defined in that folder, which contain classes, methods, etc., can be brought into another file in another submodule.
 
-![Adding a Submodule]({{ book.partials.images_path }}/creating_device_instructions/new_verse_file.png)
+![Adding a Submodule]({{ book.partials.images_path }}/creating-device-instructions/new_verse_file.png)
 
 > You can create a submodule by right clicking on the `Content` folder in the Verse explorer.
 

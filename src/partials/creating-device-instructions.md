@@ -18,7 +18,7 @@ After clicking the `Create New Verse File` button, you will be presented with an
 
 ![Create New Verse File Dialog]({{ image_path }}/create_new_verse_file.png)
 
-{% include [book.partials.path, '/download_vs_code.md'] | join %}
+{% include [book.partials.path, '/download-vs-code.md'] | join %}
 
 Once you have VS Code installed on your computer, you can click the `Verse` button in the UEFN toolbar to open up your project in VS Code.
 We will come back to the VS Code editor after setting up the other devices we will use in our script soon. For now, we will return to the UEFN editor.

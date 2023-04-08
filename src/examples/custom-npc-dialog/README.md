@@ -8,7 +8,7 @@ Dialog systems in video games are very common place today. We need to be able to
 ## Prerequisites
 
 {% set creating_device_instructions = { device_filename: 'custom_npc_dialog_device' } %}
-{% include [book.partials.path, '/creating_device_instructions.md'] | join %}
+{% include [book.partials.path, '/creating-device-instructions.md'] | join %}
 
 ## Devices setup
 
