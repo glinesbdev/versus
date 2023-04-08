@@ -20,18 +20,22 @@ Comments in code are like little notes that you leave for your future self or te
 # Comments can be put
 # on multiple lines
 
-SomeCodeHere() # They can even be put on the same line as other code!
+SomeCodeHere() # They can even be put on the same line after code!
+
+# Using in a comment before a line of code means that UEFN will not run that code
+# as if it wasn't there at all.
+# SomeCodeHere()
 ```
 
-I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now. Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting pratice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom_npc_dialog/README.md)
+I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now? Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting pratice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom_npc_dialog/README.md)
 
 ## Numbers
 
-Numbers are widely used in programming. You an use them to perform math operations, track the amount of coins a player has, how full the gas tank in your vehicle is, etc. In Verse, there are 2 types of numbers: `whole` and `fractional`. Whole numbers have the data type of `int` and fractional numbers have the data type of `float`, which we'll see more when we talk about variables.
+Numbers are widely used in programming. You an use them to perform math operations, track the amount of coins a player has, how full the gas tank in your vehicle is, etc. In Verse, there are 2 types of numbers: `rational` and `fractional`. Rational numbers have the data type of `int` and fractional numbers have the data type of `float`, which we'll see more when we talk about variables.
 
 ```ruby
-1      # A whole number is a number without a fractional component i.e. no decimal places after the number
--1     # Whole numbers can also be negative
+1      # A rational number is a number without a fractional component i.e. no decimal places after the number
+-1     # rational numbers can also be negative
 3.14   # Fractional numbers are numbers with a decimal point
 -3.14  # Fractional numbers can also be negative
 ```
@@ -48,24 +52,23 @@ We can see that strings are words separated by spaces surrounded by double quote
 
 ### Concatenation
 
-Concatenation means to combine multiple items into a single item. There are two ways in Verse to use string concatenation:
+Concatenation means to combine or append multiple items into a single item. There are two ways in Verse to use string concatenation:
 
 1. Strings can use the `+` operator to combine multiple strings into one.
-2. Strings can insert variables into a word or sentence using opening and closing curly braces (`{}`).
+2. Strings can insert variables into a word or sentence using opening and closing curly braces (`"{CoinCount}"`).
 
 > Variables are coming up next and operators after that!
 
 ```ruby
 "This is a very " + "long sentence that is " + "broken up with multiple strings"
 
-AmountOfCoins : int = 10
-MyName : string = "I have {AmountOfCoins} coins!" # Produces the string "I have 10 coins!"
+CoinCount : int = 10
+MyName : string = "I have {CoinCount} coins!" # Produces the string "I have 10 coins!"
 ```
-
 
 ## Variables
 
-Variables are an essential part of programming. A variable allows the programmer to store data of certain types to use, or change, later in the program. Variables in Verse are immutable by default. The naming convention for variables differ from language to language, but in Verse, they start with an upppercase letter using camel case.
+Variables are an essential part of programming. A variable allows the programmer to store data of certain types to use, or change, later in the program. Variables in Verse are immutable by default. The naming convention for variables differ from language to language, but in Verse, they start with an upppercase letter using the camel case naming convention.
 
 ```ruby
 NumberOfItems : int = 15
@@ -153,7 +156,7 @@ To set the new value of an optional data type, we need to wrap the type of value
 
 ### Retrieving Values
 
-To retieve the value of an optional data type, we need to use a `logical statement`. A `logical statement` is a construct that can succeed or fail. Those will be covered next but here is a preview.
+To retieve the value of an optional data type, we need to use a `logical statement`. A `logical statement` is a construct that can succeed or fail. Those will be covered next, but here is a preview.
 
 ```ruby
 if (Name := MaybeNPCName?):
@@ -175,7 +178,7 @@ if (IsOnFire?):
     ScreamInPanic()
 ```
 
-> When checking an `if` condition with a question mark (`?`), this is called a `query`.
+> When checking a `logical` type in an `if` condition with a question mark (`?`), this is called a `query`.
 
 The structure of an `if` statement is broken down as `if (condition-to-check):`. It's required that we use a colon (`:`) after the closing parenthesis (`)`). The next line needs to start with 4 lines of empty space, equal to pushing the TAB key on your keyboard once.
 
@@ -271,9 +274,7 @@ else:
 
 ### Equality
 
-When talking about equality in programming, we referring to "is value **exactly equal** to another value or **not**". There are two operators that are used for this purpose.
-
-> Once we cover the details of methods, we'll cover the details operators.
+When talking about equality in programming, what we're really asking is, "Is value **exactly equal** to another value or **not**?". There are two operators that are used for checking equality.
 
 ```ruby
 # Check if something is equal with the equality operator `=`
@@ -283,7 +284,7 @@ NumberOfCoins : int = 10
 if (NumberOfCoins = 10):
     # ...perform some more code...
 
-# Check if something is not equal the inequality operator `<>`
+# Check if something is not equal with the inequality operator `<>`
 
 if (NumberOfCoins <> 1):
     # ...perform some more code...
@@ -319,7 +320,7 @@ Wait a minute! We saw how to create a variable and that's not how we did it befo
 
 ### Single Line Expressions
 
-When you have an `if` statement that contains a single `else` branch, but not `else if`, you can use a special syntax to help with readability.
+When you have an `if` statement that contains a single `else` branch, but not `else if`, you can use a special syntax to help with readability. This is also known as a `ternary` expression.
 
 ```ruby
 IsOnFire : logic = true
@@ -353,6 +354,34 @@ if (IsOnFire?):
 ```
 
 The syntax is `if (condition) . DoThisIfTrue() ; AndThisIfTrue() ; AnotherThingIfTrue() ...`. It is possible to chain as many statements together that you'd like to perform using a semicolon (`;`) as long as the condition is true.
+
+### Block Format
+
+The `if` statement, along with many other block statements, can be used a block format. We will also use a new keyword here: `then`.
+
+```ruby
+if:
+    IsOnFire?
+then:
+    ScreamInPanic()
+    EatSomeLunch()
+```
+
+The syntax for the block is a little different as we don't have to wrap parenthesis `()` around the conditions.
+
+```ruby
+if:
+    # Tab here!
+    conditions-to-check
+then:
+    # Do something if conditions are true
+else:
+    # Do something if conditions are false
+```
+
+> Blocks are code that start with a colon `:` where the body is indented by a TAB (or 4 spaces).
+
+> Other constructs that can use blocks instead of curly braces `{}` are `array`, `map`, `class`, `struct`, `for` and `case`.
 
 ## Arrays
 
@@ -732,7 +761,7 @@ my_device := class(creative_device):
     # ...definition of class...
 ```
 
-Inheritance is a way to tell the program, "Okay, I'm not exatly this other class but I want to act like one". This means that you get **all** of the functionality, methods, dat members, etc., of another class to use in your own! This makes making complex objects much easier if most of what they do resides in another class' definition.
+Inheritance is a way to tell the program, "Okay, I'm not exatly this other class but I want to act like one". This means that you get **all** of the functionality, methods, data members, etc., of another class to use in your own! This makes making or extending (adding new functionality to) complex objects much easier if most of what they do resides in another class' definition.
 
 The syntax breakdown of inheriting from another class is `my_class := class(class_to_inherit):`.
 
@@ -745,7 +774,7 @@ If you inherit from another class, you may think to yourself, "But what can the 
     * `Verse.digest.verse` -> This defines specifics of the Verse language.
     * `UnrealEngine.digest.verse` -> This defines things like building UI in code for a players, mathematical functions, etc.
 
-It is **very** much worth your time to read through these files. Not only will you learn more about what's available to use, but more of the advanced language syntax available to all Verse programs.
+It is **very** much worth your time to read through these files. Not only will you learn more about what's available to use, but you will see many more of the advanced language syntax available to all Verse programs.
 
 A great example of a custom `creative_device` class is our [Custom NPC Dialog Example]({{ book.examples.path }}/custom_npc_dialog/README.md).
 
@@ -760,7 +789,7 @@ Helpers := module:
     # ...other methods, classes and structs here...
 ```
 
-To use a module, we need to use a new keyword called `using`; this brings everything the module has to offer into the current scope of your file.
+To use a module, we need to use a new keyword called `using`. This brings everything the module has to offer into the current scope of your file.
 
 Take a look at the `.digest.verse` files that I mentioned earlier and you can see lots and lots of examples of modules and how they are structured. You'll also see that you can use additional `using` statements in the body of a module as well!
 
@@ -813,7 +842,7 @@ player_helper<private> := class:
 
 
 # Helpers/ui_helper.verse
-using { PlayerHelper } # The module will still be found
+using { Helpers.PlayerHelper } # The module will still be found
 
 ui_helper := class:
     SomeVariable : int = player_helper{}.GetPlayerCount() # This will cause an error because the `player_helper` class is set to private!
@@ -821,7 +850,7 @@ ui_helper := class:
 
 ### Internal
 
-Internal is the default visibility attribute and this means that it can only be used inside the file that it was created in. It is a lot like the private visibility but it can be used throught the file and not just the encapsulating object.
+Internal is the default visibility attribute. It can only be used inside the file that it was created in. It is a lot like the `private` visibility attribute but it can be used throughout the file and not just the encapsulating object.
 
 ```ruby
 MakePlayerHelper<constructor>() : player_helper =
@@ -833,7 +862,7 @@ player_helper<public> := class:
 
 ### Public
 
-Public is the easies attribute to understand. If something is marked as public, we can use it anywhere!
+Public is the easiest attribute to understand. If something is marked as public, we can use it anywhere!
 
 ```ruby
 # Helpers/player_helper.verse
@@ -843,7 +872,7 @@ player_helper<public> := class:
 
 
 # Helpers/ui_helper.verse
-using { PlayerHelper }
+using { Helpers.PlayerHelper }
 
 ui_helper := class:
     PlayerHelper : player_helper = player_helper{}
@@ -854,6 +883,6 @@ ui_helper := class:
 
 ## Conclusion
 
-Although we are at the end of this document, that does not mean the Verse learning stops here! Check out the links to the [Official Verse documentation]({{ book.external.links.uefn_verse.learn }}) as well as the [Verse Language Reference]({{ book.external.links.uefn_verse.language_reference }}). These are going to be your best friends on your journey to better learn Verse.
+Although we are at the end of this document, that does not mean the Verse learning stops here! Check out the links to the [Official Verse documentation]({{ book.external.links.uefn_verse.learn }}) as well as the [Verse Language Reference]({{ book.external.links.uefn_verse.language_reference }}). These are going to be your best friends on your journey to better learn Verse. Come and check out the [Fortnite Creative Official]({{ book.external.links.fornite_creative_discord }}) Discord server (`#uefn-verse` channel).
 
 If you're looking for more to learn, check out our [Examples]({{ book.examples.path }})!
