@@ -10,4 +10,4 @@ Lots of people are asking, "How do you use Verse?". This aims to be a guide on g
 
 ## HELP!
 
-Don't feel discouraged if you don't pick things up right away; it's okay to take breaks (sometimes even long breaks!). Programming is difficult, but it's a skill well worth learning. If you have any questions, {% include [book.partials.path, '/talk_with_me.md'] | join %}.
+Don't feel discouraged if you don't pick things up right away; it's okay to take breaks (sometimes even long breaks!). Programming is difficult, but it's a skill well worth learning. If you have any questions, {% include [book.partials.path, '/talk-with-me.md'] | join %}.
