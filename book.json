@@ -33,6 +33,9 @@
         "examples": {
             "path": "/examples"
         },
+        "uefn_essentials": {
+            "path": "/uefn-essentials"
+        },
         "external": {
             "links": {
                 "fortnite_create": "https://create.fortnite.com",

@@ -32,6 +32,7 @@ Honkit allows you to create custom variables to use in your views. Below are the
 | partials.path | /partials |
 | partials.images_path | /partials/images |
 | examples.path | /examples |
+| uefn_essentials.path | /uefn-essentials |
 | external.links.fortnite_create | https://create.fortnite.com |
 | external.links.fortnite_creative_discord | https://discord.gg/fortnitecreative |
 | external.links.fortnite_creative_team_docs| https://dev.epicgames.com/documentation/en-us/uefn/creating-teams-in-creator-portal-in-unreal-editor-for-fortnite |
