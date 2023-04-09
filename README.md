@@ -29,8 +29,10 @@ Honkit allows you to create custom variables to use in your views. Below are the
 
 | Variable | Value |
 | -------- | ----- |
+| macros_path | /macros/macros.html |
 | partials.path | /partials |
 | partials.images_path | /partials/images |
+| project.readme_url | https://github.com/glinesbdev/versus/blob/main/README |
 | examples.path | /examples |
 | uefn_essentials.path | /uefn-essentials |
 | external.links.fortnite_create | https://create.fortnite.com |
@@ -39,12 +41,14 @@ Honkit allows you to create custom variables to use in your views. Below are the
 | external.links.uefn | https://www.fortnite.com/news/unreal-editor-for-fortnite-and-creator-economy-2-0-are-here-new-worlds-await |
 | external.links.uefn_collaboration | https://dev.epicgames.com/documentation/en-us/uefn/collaborating-in-unreal-editor-for-fortnite |
 | external.links.uefn_docs | https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-documentation |
+| external.links.uefn_gameplay_docs | https://dev.epicgames.com/documentation/en-us/uefn/learn-game-mechanics-in-unreal-editor-for-fortnite |
 | external.links.uefn_download | https://store.epicgames.com/en-US/p/fortnite--uefn |
 | external.links.uefn_unreal.revision_control | https://dev.epicgames.com/documentation/en-us/uefn/unreal-revision-control-in-unreal-editor-for-fortnite |
 | external.links.uefn_verse.common_types | https://dev.epicgames.com/documentation/en-us/uefn/common-types-in-verse |
 | external.links.uefn_verse.learn | https://dev.epicgames.com/documentation/en-us/uefn/learn-programming-with-verse-in-unreal-editor-for-fortnite |
 | external.links.uefn_verse.language_reference | https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference |
 | external.links.uefn_verse.api_reference | https://dev.epicgames.com/documentation/en-us/uefn/verse-api |
+| external.links.uefn_verse.specifiers_and_attributes | https://dev.epicgames.com/documentation/en-us/uefn/specifiers-and-attributes-in-verse |
 | external.links.uefn_glossary.device | https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-glossary#device |
 
 These are used in Markdown files with the following syntax: `{{ book.partials.path }}`.
@@ -55,7 +59,23 @@ These are used in Markdown files with the following syntax: `{{ book.partials.pa
 
 Partials are files that you can include into other files for re-use or to add modularity. These files are located in the [src/partials](./src/partials/) directory.
 
-Refer to the [Honkit Documentation](https://honkit.netlify.app/templating/conrefs.html) for more information
+Refer to the [Honkit Documentation](https://honkit.netlify.app/templating/conrefs.html) for more information.
+
+## Macros
+
+All macros are stored in the `/macros/macros.html`. To use a macro on a page, first import it
+
+```html
+{% import book.macros_path as macros %}
+```
+
+or you can import specific functions separated by commas
+
+```html
+{% from book.macros_path import external_link %}
+```
+
+You can then use it `{{ external_link('Fortnite', 'https://fortnite.com') }}`.
 
 ## Issues
 
