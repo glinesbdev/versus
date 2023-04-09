@@ -1,8 +1,10 @@
+{% from book.macros_path import external_link %}
+
 # Verse
 
 ## What is Verse?
 
-[Verse]({{ book.external.links.uefn_learning_verse }}) is a brand new programming language created by Epic Games to power their new [Unreal Editor for Fortnite]({{ book.external.links.uefn }}), or UEFN for short. Verse is a language designed to interact with Fortnite's existing [​Devices]({{ book.external.links.uefn_glossary.device }}) system. It can be used to create powerful and personalized Devices for your experience.
+{{ external_link('Verse', book.external.links.uefn_learning_verse) }} is a brand new programming language created by Epic Games to power their new {{ external_link('Unreal Editor for Fortnite', book.external.links.uefn) }}, or UEFN for short. Verse is a language designed to interact with Fortnite's existing {{ external_link('​Devices', book.external.links.uefn_glossary.device) }} system. It can be used to create powerful and personalized Devices for your experience.
 
 ## Why more Verse documentation?
 
