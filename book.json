@@ -33,12 +33,21 @@
         "examples": {
             "path": "/examples"
         },
+        "uefn_essentials": {
+            "path": "/uefn-essentials"
+        },
         "external": {
             "links": {
+                "fortnite_create": "https://create.fortnite.com",
                 "fornite_creative_discord": "https://discord.gg/fortnitecreative",
+                "fortnite_creative_team_docs": "https://dev.epicgames.com/documentation/en-us/uefn/creating-teams-in-creator-portal-in-unreal-editor-for-fortnite",
                 "uefn": "https://www.fortnite.com/news/unreal-editor-for-fortnite-and-creator-economy-2-0-are-here-new-worlds-await",
+                "uefn_collaboration": "https://dev.epicgames.com/documentation/en-us/uefn/collaborating-in-unreal-editor-for-fortnite",
                 "uefn_docs": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-documentation",
                 "uefn_download": "https://store.epicgames.com/en-US/p/fortnite--uefn",
+                "uefn_unreal": {
+                    "revision_control": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-revision-control-in-unreal-editor-for-fortnite"
+                },
                 "uefn_verse": {
                     "common_types": "https://dev.epicgames.com/documentation/en-us/uefn/common-types-in-verse",
                     "learn": "https://dev.epicgames.com/documentation/en-us/uefn/learn-programming-with-verse-in-unreal-editor-for-fortnite",

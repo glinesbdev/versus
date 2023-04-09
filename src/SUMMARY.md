@@ -18,6 +18,7 @@
         * [Conclusion](verse/basics/README.md#conclusion)
 * [UEFN Essentials](uefn-essentials/README.md)
    * [Testing Multiplayer Projects](uefn-essentials/testing-multiplayer-projects/README.md)
+   * [Collaborative Team Editing](uefn-essentials/collaborative-team-editing/README.md)
 * [Examples](examples/README.md)
     * [Custom NPC Dialog](examples/custom-npc-dialog/README.md)
         * [Prerequisites](examples/custom-npc-dialog/README.md#prerequisites)
