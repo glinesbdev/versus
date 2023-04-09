@@ -17,7 +17,38 @@ $ npm install
 $ npx honkit serve
 ```
 
+> You can also use `npm run dev` to start the development server.
+
 Then head to <http://localhost:4000> to view the book. Any changes you make to content will be automatically reloaded by your browser.
+
+> When adding any new variables or partials, please update this document!
+
+## Variables
+
+Honkit allows you to create custom variables to use in your views. Below are the current registered variables.
+
+| Variable | Value |
+| -------- | ----- |
+| partials.path | /partials |
+| partials.images_path | /partials/images |
+| examples.path | /examples |
+| external.links.fortnite_creative_discord | https://discord.gg/fortnitecreative |
+| external.links.uefn | https://www.fortnite.com/news/unreal-editor-for-fortnite-and-creator-economy-2-0-are-here-new-worlds-await |
+| external.links.uefn_docs | https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-documentation |
+| external.links.uefn_download | https://store.epicgames.com/en-US/p/fortnite--uefn |
+| external.links.uefn_verse.common_types | https://dev.epicgames.com/documentation/en-us/uefn/common-types-in-verse |
+| external.links.uefn_verse.learn | https://dev.epicgames.com/documentation/en-us/uefn/learn-programming-with-verse-in-unreal-editor-for-fortnite |
+| external.links.uefn_verse.language_reference | https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference |
+| external.links.uefn_verse.api_reference | https://dev.epicgames.com/documentation/en-us/uefn/verse-api |
+| external.links.uefn_glossary.device | https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-glossary#device |
+
+> To register new variables, update the `variables` key in the [book.json](./book.json) file.
+
+## Partials
+
+Partials are files that you can include into other files for re-use or to add modularity. These files are located in the [src/partials](./src/partials/) directory.
+
+Refer to the [Honkit Documentation](https://honkit.netlify.app/templating/conrefs.html) for more information
 
 ## Issues
 
