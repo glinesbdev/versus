@@ -1,3 +1,5 @@
+{% from book.macros_path import external_link %}
+
 # Examples
 
 This document aims to provide useful, real world, detailed examples that people can learn from and use in their own custom experiences.
@@ -11,8 +13,8 @@ Examples here should be heavily commented and easy to follow. All examples that 
 - `\#` -> This is a normal comment to either give context, instruction or specifics.
 - `\# Insight: Some useful information here!` -> This is a tip or extra bit of useful information to give to the reader.
 
-Have an example that you'd like to share? Refer to the [Contributing Section][README] of the project's README.
+Have an example that you'd like to share? Refer to the {{ external_link('Contributing Section', book.project.readme_url) }} of the project's README.
 
-Find something that doesn't seem quite right or straight up doesn't work? Refer to the [Issues Section][README] of the project's README.
+Find something that doesn't seem quite right or straight up doesn't work? Refer to the {{ external_link('Issues Section', book.project.readme_url) }} of the project's README.
 
 [README]: https://github.com/glinesbdev/versus/blob/main/README.md

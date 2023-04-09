@@ -1,10 +1,12 @@
+{% from book.macros_path import external_link %}
+
 # Preface
 
 The information contained here is best learned by typing it in (not copying!) while you read. Create a new verse script in UEFN and follow along!
 
-> Use this information in additon to the [Official Verse documentation]({{ book.external.links.uefn_verse.learn }}) along with the [Verse Language Reference]({{ book.external.links.uefn_verse.language_reference }}).
+> Use this information in additon to the {{ external_link('Official Verse documentation', book.external.links.uefn_verse.learn) }} along with the {{ external_link('Verse Language Reference', book.external.links.uefn_verse.language_reference) }}.
 
-> {% include [book.partials.path, '/download-vs-code.md'] | join %}
+{% include [book.partials.path, '/download-vs-code.md'] | join %}
 
 # Verse Basics
 
@@ -27,7 +29,7 @@ SomeCodeHere() # They can even be put on the same line after code!
 # SomeCodeHere()
 ```
 
-I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now? Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting pratice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom-npc-dialog/README.md)
+I can hear you thinking to yourself, "But I wrote this code, of course I know what it does and how it works!". That may be true a day or even a week from now, but what about 6 months or a year from now? Putting in a helpful comment can save you, and your teammates, hours or even days of headaches! A great example of good commenting pratice is in our [Custom NPC Dialog Example]({{ book.examples.path }}/custom-npc-dialog/README.md).
 
 ## Numbers
 
@@ -90,7 +92,7 @@ PI : float = 3.14
 
 Don't worry if you don't recognize some of these data types. We'll go over them in future lessons!
 
-> The [UEFN documentation]({{ book.external.links.uefn_verse.common_types }}) has even more examples of the different types of variables you can use!
+> The {{ external_link('UEFN documentation', book.external.links.uefn_verse.common_types) }} has even more examples of the different types of variables you can use!
 
 ### Updating Variables
 
@@ -504,7 +506,7 @@ for (Resource -> Amount : Resources):
 
 The syntax of a `for loop` when used with a `map` is `for (Key -> Value : Collection):`. This creates two new variables to use in the `for loop`'s block. These names can be anything, but it's most useful when they are related to the collection being iterated over.
 
-I'm not going to give you the output to this one. Let me know in the [Official Discord]({{ book.external.links.fornite_creative_discord }}) (`@glinesbdev`) server what your solution is.
+I'm not going to give you the output to this one. Let me know in the {{ external_link('Official Discord', book.external.links.fornite_creative_discord) }} (`@glinesbdev`) server what your solution is.
 
 ### Updating Maps
 
@@ -767,7 +769,7 @@ The syntax breakdown of inheriting from another class is `my_class := class(clas
 
 If you inherit from another class, you may think to yourself, "But what can the other class do that I can use?". Hopefully you'll understand why you need to inherit from a specific class, but if not, you can easily find out what each class does with some explanations for each method / data member, if any. There are two primary ways to find this information:
 
-1. Use the [UEFN API Reference]({{ book.external.links.uefn_verse.api_reference }}) website.
+1. Use the {{ external_link('UEFN API Reference', book.external.links.uefn_verse.api_reference) }} website.
     * This website has pretty good explanations of each class. (Sometimes lacking a little bit 🙏)
 2. Every UEFN project comes with the code definitions for everything you can use inside UEFN. These files all end in `.digest.verse`.
     * `Fortnite.digest.verse` -> This defines all of the Fortnite specific items like UI buttons, Devices, etc.
@@ -819,7 +821,7 @@ Structuring your code this way encourages developers to create code that is reus
 
 ## Visibility
 
-Now is a good a time as ever to talk about visibility. Visibility is directly tied to a concept called `attributes`. Attributes go along with another concept called `specifiers`. I **highly recommend** you read over Epic's [Specifiers and Attributes](https://dev.epicgames.com/documentation/en-us/uefn/specifiers-and-attributes-in-verse) documentation page to understand more about them. We will go over the most commonly used attributes.
+Now is a good a time as ever to talk about visibility. Visibility is directly tied to a concept called `attributes`. Attributes go along with another concept called `specifiers`. I **highly recommend** you read over Epic's {{ external_link('Specifiers and Attributes', book.external.links.uefn_verse.specifiers_and_attributes) }} documentation page to understand more about them. We will go over the most commonly used attributes.
 
 Attributes are put onto variables, methods, classes and structs. By default, all visibility attributes are `internal`.
 
@@ -883,6 +885,6 @@ ui_helper := class:
 
 ## Conclusion
 
-Although we are at the end of this document, that does not mean the Verse learning stops here! Check out the links to the [Official Verse documentation]({{ book.external.links.uefn_verse.learn }}) as well as the [Verse Language Reference]({{ book.external.links.uefn_verse.language_reference }}). These are going to be your best friends on your journey to better learn Verse. Come and check out the [Fortnite Creative Official]({{ book.external.links.fornite_creative_discord }}) Discord server (`#uefn-verse` channel).
+Although we are at the end of this document, that does not mean the Verse learning stops here! Check out the links to the {{ external_link('Official Verse documentation', book.external.links.uefn_verse.learn) }} as well as the {{ external_link('Verse Language Reference', book.external.links.uefn_verse.language_reference) }}. These are going to be your best friends on your journey to better learn Verse. Come and check out the {{ external_link('Fortnite Creative Official', book.external.links.fornite_creative_discord) }} Discord server (`#uefn-verse` channel).
 
 If you're looking for more to learn, check out our [Examples]({{ book.examples.path }})!

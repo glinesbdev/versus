@@ -26,9 +26,13 @@
         }
     },
     "variables": {
+        "macros_path": "/macros/macros.html",
         "partials": {
             "path": "/partials",
             "images_path": "/partials/images"
+        },
+        "project": {
+            "readme_url": "https://github.com/glinesbdev/versus/blob/main/README"
         },
         "examples": {
             "path": "/examples"
@@ -44,6 +48,7 @@
                 "uefn": "https://www.fortnite.com/news/unreal-editor-for-fortnite-and-creator-economy-2-0-are-here-new-worlds-await",
                 "uefn_collaboration": "https://dev.epicgames.com/documentation/en-us/uefn/collaborating-in-unreal-editor-for-fortnite",
                 "uefn_docs": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-documentation",
+                "uefn_gameplay_docs": "https://dev.epicgames.com/documentation/en-us/uefn/learn-game-mechanics-in-unreal-editor-for-fortnite",
                 "uefn_download": "https://store.epicgames.com/en-US/p/fortnite--uefn",
                 "uefn_unreal": {
                     "revision_control": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-revision-control-in-unreal-editor-for-fortnite"
@@ -52,7 +57,8 @@
                     "common_types": "https://dev.epicgames.com/documentation/en-us/uefn/common-types-in-verse",
                     "learn": "https://dev.epicgames.com/documentation/en-us/uefn/learn-programming-with-verse-in-unreal-editor-for-fortnite",
                     "language_reference": "https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference",
-                    "api_reference": "https://dev.epicgames.com/documentation/en-us/uefn/verse-api"
+                    "api_reference": "https://dev.epicgames.com/documentation/en-us/uefn/verse-api",
+                    "specifiers_and_attributes": "https://dev.epicgames.com/documentation/en-us/uefn/specifiers-and-attributes-in-verse"
                 },
                 "uefn_glossary": {
                     "device": "https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-glossary#device"
