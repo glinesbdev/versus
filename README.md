@@ -32,15 +32,21 @@ Honkit allows you to create custom variables to use in your views. Below are the
 | partials.path | /partials |
 | partials.images_path | /partials/images |
 | examples.path | /examples |
+| external.links.fortnite_create | https://create.fortnite.com |
 | external.links.fortnite_creative_discord | https://discord.gg/fortnitecreative |
+| external.links.fortnite_creative_team_docs| https://dev.epicgames.com/documentation/en-us/uefn/creating-teams-in-creator-portal-in-unreal-editor-for-fortnite |
 | external.links.uefn | https://www.fortnite.com/news/unreal-editor-for-fortnite-and-creator-economy-2-0-are-here-new-worlds-await |
+| external.links.uefn_collaboration | https://dev.epicgames.com/documentation/en-us/uefn/collaborating-in-unreal-editor-for-fortnite |
 | external.links.uefn_docs | https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-documentation |
 | external.links.uefn_download | https://store.epicgames.com/en-US/p/fortnite--uefn |
+| external.links.uefn_unreal.revision_control | https://dev.epicgames.com/documentation/en-us/uefn/unreal-revision-control-in-unreal-editor-for-fortnite |
 | external.links.uefn_verse.common_types | https://dev.epicgames.com/documentation/en-us/uefn/common-types-in-verse |
 | external.links.uefn_verse.learn | https://dev.epicgames.com/documentation/en-us/uefn/learn-programming-with-verse-in-unreal-editor-for-fortnite |
 | external.links.uefn_verse.language_reference | https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference |
 | external.links.uefn_verse.api_reference | https://dev.epicgames.com/documentation/en-us/uefn/verse-api |
 | external.links.uefn_glossary.device | https://dev.epicgames.com/documentation/en-us/uefn/unreal-editor-for-fortnite-glossary#device |
+
+These are used in Markdown files with the following syntax: `{{ book.partials.path }}`.
 
 > To register new variables, update the `variables` key in the [book.json](./book.json) file.
 
